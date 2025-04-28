@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XcapeCode</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__logo">
+            <img src="img/logo.png" alt="XcapeCode Logo">
+        </div>
+        <input type="checkbox" id="menu-toggle" class="navbar__checkbox">
+        <label for="menu-toggle" class="navbar__hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <ul class="navbar__menu">
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contacto">Contáctanos</a></li>
+            <li><a href="#reserva" class="navbar__btn">Reserva Aquí</a></li>
+        </ul>
+    </nav>
+    <!-- Carrusel de habitaciones -->
+    <section class="rooms-carousel">
+        <div class="carousel-bg-overlay"></div>
+        <button class="carousel-arrow left" aria-label="Anterior">&#60;</button>
+        <div class="carousel-track">
+            <div class="carousel-item main">
+                <img src="img/room1.png" alt="Habitación 1">
+            </div>
+            <div class="carousel-item">
+                <img src="img/room2.png" alt="Habitación 2">
+            </div>
+            <div class="carousel-item">
+                <img src="img/room3.png" alt="Habitación 3">
+            </div>
+            <div class="carousel-item">
+                <img src="img/room4.png" alt="Habitación 4">
+            </div>
+        </div>
+        <button class="carousel-arrow right" aria-label="Siguiente">&#62;</button>
+        <div class="carousel-room-info">
+            <div class="carousel-room-name">Nombre de la habitación</div>
+            <div class="carousel-room-desc">Descripción breve de la habitación.</div>
+        </div>
+    </section>
+
+    <!-- Sección Por qué visitarnos -->
+    <section class="visit-reasons">
+      <div class="visit-reasons__container">
+        <h2 class="visit-reasons__title">¿Por qué visitarnos?</h2>
+        <p class="visit-reasons__subtitle">Vive la emoción de resolver acertijos, descubrir pistas ocultas y superar desafíos en escenarios totalmente inmersivos. Nuestro escape room está diseñado para que cada grupo, ya sean amigos, familia o compañeros de trabajo, disfrute de una experiencia única llena de misterio, trabajo en equipo y diversión asegurada. ¿Te atreves a escapar a tiempo?</p>
+        <div class="visit-reasons__cards">
+          <div class="visit-reasons__card experiencia">
+            <h3>Desafíos Únicos</h3>
+            <p>Retos originales que pondrán a prueba tu ingenio y el trabajo en equipo.</p>
+          </div>
+          <div class="visit-reasons__card equipo">
+            <h3>Ambientes Inmersivos</h3>
+            <p>Escenarios realistas y ambientación cuidada para una experiencia inolvidable.</p>
+          </div>
+          <div class="visit-reasons__card premium">
+            <h3>Diversión para Todos</h3>
+            <p>Ideal para amigos, familias y empresas. ¡Todos pueden participar!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Fin Sección Por qué visitarnos -->
+
+    <!-- Sección 3: Video Promocional -->
+    <section class="promo-video-section">
+      <video class="promo-video" src="vids/sec3.mp4" autoplay muted loop playsinline></video>
+    </section>
+
+    <!-- Sección 4: Valoraciones de la Comunidad -->
+    <section class="community-reviews">
+      <h2 class="community-reviews__title">Valoraciones de la comunidad</h2>
+      <div class="reviews-carousel">
+        <button class="carousel-arrow left" aria-label="Anterior">&#60;</button>
+        <div class="review-card">
+          <div class="review-content">
+            <div class="review-text">¡Excelente experiencia! Muy divertido y desafiante. El personal fue muy amable y los acertijos realmente nos hicieron pensar. Sin duda volveremos a intentarlo con otro grupo de amigos. ¡Altamente recomendado para pasar un rato diferente y emocionante!</div>
+            <div class="review-stars">★★★★★</div>
+          </div>
+          <div class="review-user">
+            <div class="user-avatar">
+              <img src="img/Ana.png" alt="Ana López">
+            </div>
+            <div class="user-name">Ana López</div>
+          </div>
+        </div>
+        <button class="carousel-arrow right" aria-label="Siguiente">&#62;</button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__brand">
+          <img src="img/logo.png" alt="XcapeCode Logo" class="footer__logo">
+          <p class="footer__slogan">Donde cada puerta es un enigma y cada minuto cuenta</p>
+        </div>
+
+        <div class="footer__contact">
+          <h3>Información</h3>
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <span>+1 (809) 555-0123</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>xcapecode@gmail.com</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-clock"></i>
+              <span>Mar-Dom: 02:00pm - 11:00pm</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="footer__social">
+          <h3>Síguenos</h3>
+          <div class="social-icons">
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="footer__location">
+          <h3>Ubicación</h3>
+          <div class="map-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.123456789012!2d-70.6969!3d19.4517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eb1c4f0c0c0c0c0%3A0x0c0c0c0c0c0c0c0c!2sJardines%20Metropolitanos%2C%20Santiago%20de%20los%20Caballeros!5e0!3m2!1ses!2sdo!4v1647881234567!5m2!1ses!2sdo" 
+              width="100%" 
+              height="120" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2024 XcapeCode. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <a href="#" class="back-to-top">
+      <i class="fas fa-arrow-up"></i>
+      <span>Volver arriba</span>
+    </a>
+
+    <script>
+    const rooms = [
+        {img: 'img/room1.png', name: 'Habitación 1', desc: 'La experiencia clásica de escape con acertijos para todos.'},
+        {img: 'img/room2.png', name: 'Habitación 2', desc: 'Un reto de ingenio y trabajo en equipo en un ambiente misterioso.'},
+        {img: 'img/room3.png', name: 'Habitación 3', desc: 'Sumérgete en una aventura temática llena de sorpresas.'},
+        {img: 'img/room4.png', name: 'Habitación 4', desc: 'Desafía tus sentidos y tu lógica en esta sala única.'}
+    ];
+    let current = 0;
+    const track = document.querySelector('.carousel-track');
+    const items = Array.from(track.children);
+    const leftBtn = document.querySelector('.carousel-arrow.left');
+    const rightBtn = document.querySelector('.carousel-arrow.right');
+    const roomName = document.querySelector('.carousel-room-name');
+    const roomDesc = document.querySelector('.carousel-room-desc');
+
+    function updateCarousel() {
+        items.forEach((item, i) => {
+            item.classList.remove('main', 'left', 'right');
+            item.querySelector('img').style.animation = '';
+            if (i === current) {
+                item.classList.add('main');
+                // Reiniciar animación de color
+                void item.querySelector('img').offsetWidth;
+                item.querySelector('img').style.animation = 'colorIn 0.7s cubic-bezier(.4,2,.6,1)';
+            } else if (i === (current - 1 + rooms.length) % rooms.length) {
+                item.classList.add('left');
+            } else if (i === (current + 1) % rooms.length) {
+                item.classList.add('right');
+            }
+        });
+        roomName.textContent = rooms[current].name;
+        roomDesc.textContent = rooms[current].desc;
+    }
+
+    leftBtn.addEventListener('click', () => {
+        current = (current - 1 + rooms.length) % rooms.length;
+        updateCarousel();
+    });
+    rightBtn.addEventListener('click', () => {
+        current = (current + 1) % rooms.length;
+        updateCarousel();
+    });
+
+    updateCarousel();
+
+    // Animación de entrada/salida al hacer scroll para la sección 'visit-reasons'
+    document.addEventListener('DOMContentLoaded', function() {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+          } else {
+            entry.target.classList.remove('is-visible');
+          }
+        });
+      }, {
+        threshold: 0.2
+      });
+      // Selecciona el título y las tarjetas
+      const targets = document.querySelectorAll('.visit-reasons__title, .visit-reasons__card');
+      targets.forEach(el => observer.observe(el));
+    });
+
+    // Carrusel de valoraciones de la comunidad
+    const reviews = [
+      {
+        text: "¡Excelente experiencia! Muy divertido y desafiante. El personal fue muy amable y los acertijos realmente nos hicieron pensar. Sin duda volveremos a intentarlo con otro grupo de amigos. ¡Altamente recomendado para pasar un rato diferente y emocionante!",
+        name: "Ana López",
+        stars: 5
+      },
+      {
+        text: "El mejor escape room al que he ido. La ambientación es increíble y cada detalle está muy bien cuidado. Nos encantó la variedad de retos y la historia detrás de cada sala. ¡Una experiencia inolvidable!",
+        name: "Carlos Pérez",
+        stars: 5
+      },
+      {
+        text: "Muy buena ambientación y acertijos. Fuimos en familia y todos pudimos participar. Los desafíos están bien pensados y el tiempo se pasa volando. ¡Repetiremos seguro!",
+        name: "María García",
+        stars: 4
+      },
+      {
+        text: "Perfecto para ir con amigos. Nos reímos mucho y tuvimos que trabajar en equipo para poder salir a tiempo. El personal nos explicó todo muy bien y nos hizo sentir como en casa.",
+        name: "Juan Torres",
+        stars: 5
+      },
+      {
+        text: "Nos encantó, volveremos seguro. La dificultad es la justa para que sea divertido y desafiante. Además, el lugar está muy limpio y bien organizado.",
+        name: "Lucía Fernández",
+        stars: 5
+      },
+      {
+        text: "Personal muy amable y juegos ingeniosos. Se nota que hay mucho trabajo detrás de cada sala. Lo recomiendo tanto para principiantes como para expertos en escape rooms.",
+        name: "Pedro Sánchez",
+        stars: 4
+      }
+    ];
+
+    let currentReview = 0;
+    const reviewCard = document.querySelector('.review-card');
+    const leftArrow = document.querySelector('.reviews-carousel .carousel-arrow.left');
+    const rightArrow = document.querySelector('.reviews-carousel .carousel-arrow.right');
+
+    function renderReview(index) {
+      const review = reviews[index];
+      const card = reviewCard;
+      
+      // Add sliding class based on direction
+      if (index > currentReview) {
+        card.classList.add('sliding');
+      } else {
+        card.classList.add('sliding-left');
+      }
+      
+      // Wait for the slide out animation
+      setTimeout(() => {
+        card.querySelector('.review-text').textContent = review.text;
+        card.querySelector('.user-name').textContent = review.name;
+        card.querySelector('.review-stars').textContent = '★'.repeat(review.stars) + '☆'.repeat(5 - review.stars);
+        
+        // Update user avatar image
+        const userAvatar = card.querySelector('.user-avatar');
+        const firstName = review.name.split(' ')[0];
+        let imageName;
+        
+        // Handle different file extensions
+        switch(firstName) {
+          case 'Ana':
+            imageName = 'Ana.png';
+            break;
+          case 'Carlos':
+            imageName = 'Carlos.png';
+            break;
+          case 'María':
+            imageName = 'Maria.jpg';
+            break;
+          case 'Juan':
+            imageName = 'Juan.png';
+            break;
+          case 'Lucía':
+            imageName = 'Lucia.png';
+            break;
+          case 'Pedro':
+            imageName = 'Pedro.jpg';
+            break;
+        }
+        
+        userAvatar.innerHTML = `<img src="img/${imageName}" alt="${review.name}">`;
+        
+        // Remove sliding class to trigger slide in
+        card.classList.remove('sliding', 'sliding-left');
+      }, 400);
+    }
+
+    leftArrow.addEventListener('click', () => {
+      currentReview = (currentReview - 1 + reviews.length) % reviews.length;
+      renderReview(currentReview);
+    });
+    rightArrow.addEventListener('click', () => {
+      currentReview = (currentReview + 1) % reviews.length;
+      renderReview(currentReview);
+    });
+    </script>
+
+    <script>
+      // Back to top button functionality
+      const backToTopButton = document.querySelector('.back-to-top');
+      
+      window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+          backToTopButton.classList.add('visible');
+        } else {
+          backToTopButton.classList.remove('visible');
+        }
+      });
+
+      backToTopButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    </script>
+</body>
+</html>
