@@ -8,17 +8,21 @@ body {
 
 .navbar {
     width: 100%;
-    background: rgba(0,0,0,0.4);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    max-width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5rem 2rem;
+    padding: 0 2rem;
+    height: 70px;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 10;
+    right: 0;
+    z-index: 100;
     box-sizing: border-box;
 }
 
@@ -35,27 +39,49 @@ body {
 }
 
 .navbar__logo img {
-    height: 120px;
+    height: 140px;
     width: auto;
     transition: height 0.3s ease;
 }
 
 .navbar__menu {
-    display: flex;
-    gap: 2rem;
     list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
     margin: 0;
     padding: 0;
 }
 
 .navbar__menu li a {
-    color: #fff;
     text-decoration: none;
+    color: #fff;
     font-weight: 500;
-    font-size: 1.1rem;
+    transition: all 0.3s ease;
     padding: 8px 12px;
     border-radius: 4px;
-    transition: all 0.3s;
+    font-size: 1.1rem;
+    position: relative;
+}
+
+.navbar__menu li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #791204;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.navbar__menu li a:hover {
+    color: #791204;
+}
+
+.navbar__menu li a:hover::after {
+    width: 80%;
 }
 
 .navbar__btn {
@@ -64,8 +90,8 @@ body {
     padding: 8px 20px;
     border-radius: 20px;
     font-weight: bold;
+    transition: all 0.3s ease;
     border: 2px solid transparent;
-    transition: all 0.3s;
 }
 
 .navbar__btn:hover {
@@ -80,351 +106,89 @@ body {
 
 .navbar__hamburger {
     display: none;
+    flex-direction: column;
+    justify-content: center;
     cursor: pointer;
-    width: 30px;
-    height: 20px;
-    position: relative;
-    z-index: 100;
+    width: 32px;
+    height: 32px;
+    z-index: 20;
     margin-right: 1.5rem;
 }
 
 .navbar__hamburger span {
-    display: block;
-    position: absolute;
-    height: 3px;
+    height: 4px;
     width: 100%;
     background: #fff;
-    border-radius: 3px;
-    opacity: 1;
-    left: 0;
-    transform: rotate(0deg);
-    transition: .25s ease-in-out;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
-}
-
-.navbar__hamburger span:nth-child(1) {
-    top: 0;
-}
-
-.navbar__hamburger span:nth-child(2) {
-    top: 8px;
-}
-
-.navbar__hamburger span:nth-child(3) {
-    top: 16px;
-}
-
-.navbar__checkbox:checked ~ .navbar__hamburger span:nth-child(1) {
-    top: 8px;
-    transform: rotate(135deg);
-}
-
-.navbar__checkbox:checked ~ .navbar__hamburger span:nth-child(2) {
-    opacity: 0;
-    left: -60px;
-}
-
-.navbar__checkbox:checked ~ .navbar__hamburger span:nth-child(3) {
-    top: 8px;
-    transform: rotate(-135deg);
+    margin: 4px 0;
+    border-radius: 2px;
+    transition: 0.3s;
 }
 
 @media (max-width: 900px) {
     .navbar {
-        padding: 0.7rem 2rem;
-    }
-    .navbar__logo img {
-        height: 110px;
+        padding: 0 1rem;
     }
     .navbar__menu {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 100%;
-        height: 100vh;
-        background: rgba(0,0,0,0.95);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 2rem;
-        transition: right 0.3s ease;
-        z-index: 99;
-    }
-
-    .navbar__hamburger {
-        display: block;
-        margin-right: 1.5rem;
-    }
-
-    .navbar__menu li a {
-        font-size: 1.3rem;
-        padding: 10px 20px;
-    }
-
-    .navbar__checkbox:checked ~ .navbar__menu {
+        position: absolute;
+        top: 70px;
         right: 0;
-    }
-
-    .navbar__hamburger span:nth-child(1) {
-        top: 0;
-    }
-
-    .navbar__hamburger span:nth-child(2) {
-        top: 8px;
-    }
-
-    .navbar__hamburger span:nth-child(3) {
-        top: 16px;
-    }
-
-    .navbar__checkbox:checked ~ .navbar__hamburger span:nth-child(1) {
-        top: 8px;
-        transform: rotate(135deg);
-    }
-
-    .navbar__checkbox:checked ~ .navbar__hamburger span:nth-child(2) {
-        opacity: 0;
-        left: -60px;
-    }
-
-    .navbar__checkbox:checked ~ .navbar__hamburger span:nth-child(3) {
-        top: 8px;
-        transform: rotate(-135deg);
-    }
-
-    .contact-challenge {
-        padding: 0;
-    }
-}
-
-@media (max-width: 700px) {
-    .navbar {
-        padding: 0.7rem 1.8rem;
-    }
-    .navbar__logo img {
-        height: 90px;
-    }
-    .contact-main {
-        padding-top: 140px;
-    }
-    .contact-hero h1 {
-        font-size: 2.2rem;
-    }
-    .contact-breadcrumb {
-        font-size: 1rem;
-    }
-    .contact-content {
+        background: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
         flex-direction: column;
-        padding: 0 1.2rem;
-        gap: 2rem;
+        width: 200px;
+        height: calc(100vh - 70px);
+        align-items: flex-start;
+        padding: 2rem 1rem;
+        gap: 1.5rem;
+        box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        z-index: 15;
     }
-    .contact-form-block, .contact-info-block {
-        width: 100%;
-        margin: 0;
-        padding: 1.8rem 1.5rem;
-    }
-    .contact-info-list {
-        grid-template-columns: 1fr;
-    }
-    .contact-map {
-        margin-top: 1.5rem;
-    }
-    .contact-challenge {
-        padding: 0;
-    }
-    .challenge-overlay h2 {
-        font-size: 1.8rem;
-    }
-    .challenge-btn {
-        padding: 0.8rem 1.5rem;
-        font-size: 1rem;
-    }
-    .footer__container {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        padding: 2.5rem 1.2rem;
-        text-align: center;
-    }
-    .footer__brand {
-        justify-content: center;
-    }
-    .footer__logo {
-        height: 90px;
-    }
-    .footer__social {
-        justify-content: center;
-    }
-    .social-icons {
-        justify-content: center;
-    }
-    .contact-info {
-        justify-content: center;
+    .navbar__checkbox:checked ~ .navbar__menu {
+        transform: translateX(0);
     }
     .navbar__hamburger {
-        margin-right: 1.8rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .navbar {
-        padding: 0.7rem 1.5rem;
+        display: flex;
     }
     .navbar__logo img {
-        height: 70px;
+        height: 130px;
     }
     .contact-main {
         padding-top: 120px;
     }
-    .contact-hero h1 {
-        font-size: 1.8rem;
-    }
-    .contact-breadcrumb {
-        font-size: 0.9rem;
-    }
-    .contact-content {
-        padding: 0 1rem;
-    }
-    .contact-form-block, .contact-info-block {
-        padding: 1.5rem 1rem;
-    }
-    .contact-form-block h2, .contact-info-block h2 {
-        font-size: 1.5rem;
-        margin-bottom: 1.2rem;
-    }
-    .contact-form input,
-    .contact-form textarea {
-        padding: 0.8rem;
-        font-size: 0.9rem;
-    }
-    .contact-form button {
-        width: 100%;
-        padding: 0.8rem;
-        font-size: 1rem;
-    }
-    .contact-info-item {
-        padding: 0.7rem;
-        font-size: 0.9rem;
-    }
-    .contact-challenge {
-        padding: 0;
-    }
-    .challenge-overlay h2 {
-        font-size: 1.5rem;
-    }
-    .challenge-btn {
-        padding: 0.7rem 1.3rem;
-        font-size: 0.9rem;
-    }
-    .footer__logo {
-        height: 70px;
-    }
-    .footer__slogan {
-        font-size: 0.9rem;
-    }
-    .footer__bottom p {
-        font-size: 0.8rem;
-    }
-    .footer__container {
-        padding: 2rem 1rem;
-        gap: 1.5rem;
-    }
-    .navbar__hamburger {
-        margin-right: 1.5rem;
-    }
-    .navbar__hamburger span {
-        height: 2px;
-    }
-    .navbar__hamburger span:nth-child(2) {
-        top: 7px;
-    }
-    .navbar__hamburger span:nth-child(3) {
-        top: 14px;
-    }
-    .navbar__checkbox:checked ~ .navbar__hamburger span:nth-child(1),
-    .navbar__checkbox:checked ~ .navbar__hamburger span:nth-child(3) {
-        top: 7px;
-    }
 }
 
-@media (max-width: 360px) {
-    .navbar {
-        padding: 0.7rem 1.2rem;
-    }
+@media (max-width: 700px) {
     .navbar__logo img {
-        height: 60px;
+        height: 110px;
     }
     .contact-main {
         padding-top: 100px;
     }
-    .contact-hero h1 {
-        font-size: 1.5rem;
+}
+
+@media (max-width: 480px) {
+    .navbar__logo img {
+        height: 90px;
     }
-    .contact-breadcrumb {
-        font-size: 0.85rem;
+    .contact-main {
+        padding-top: 90px;
     }
-    .contact-content {
-        padding: 0 0.8rem;
+}
+
+@media (max-width: 360px) {
+    .navbar__logo img {
+        height: 80px;
     }
-    .contact-form-block, .contact-info-block {
-        padding: 1.2rem 0.8rem;
-    }
-    .contact-form-block h2, .contact-info-block h2 {
-        font-size: 1.3rem;
-        margin-bottom: 1rem;
-    }
-    .contact-form input,
-    .contact-form textarea {
-        padding: 0.7rem;
-        font-size: 0.85rem;
-    }
-    .contact-form button {
-        padding: 0.7rem;
-        font-size: 0.9rem;
-    }
-    .contact-info-item {
-        padding: 0.6rem;
-        font-size: 0.85rem;
-    }
-    .contact-challenge {
-        padding: 0;
-    }
-    .challenge-overlay h2 {
-        font-size: 1.3rem;
-    }
-    .challenge-btn {
-        padding: 0.6rem 1.1rem;
-        font-size: 0.85rem;
-    }
-    .footer__logo {
-        height: 60px;
-    }
-    .footer__slogan {
-        font-size: 0.85rem;
-    }
-    .footer__bottom p {
-        font-size: 0.75rem;
-        padding: 0.8rem;
-    }
-    .navbar__hamburger {
-        margin-right: 1.2rem;
-    }
-    .navbar__hamburger span:nth-child(2) {
-        top: 6px;
-    }
-    .navbar__hamburger span:nth-child(3) {
-        top: 12px;
-    }
-    .navbar__checkbox:checked ~ .navbar__hamburger span:nth-child(1),
-    .navbar__checkbox:checked ~ .navbar__hamburger span:nth-child(3) {
-        top: 6px;
+    .contact-main {
+        padding-top: 80px;
     }
 }
 
 .contact-main {
-    padding-top: 180px;
+    padding-top: 140px;
     min-height: 100vh;
     background: #111;
     width: 100%;
@@ -433,7 +197,7 @@ body {
 }
 .contact-hero {
     text-align: center;
-    margin-bottom: 2.2rem;
+    margin-bottom: 2rem;
     padding: 0 1rem;
     width: 100%;
     box-sizing: border-box;
@@ -462,6 +226,44 @@ body {
     padding: 0 2.5rem;
     box-sizing: border-box;
 }
+
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+        padding: 0 1.5rem;
+        gap: 2rem;
+    }
+    
+    .contact-form-block, 
+    .contact-info-block {
+        padding: 1.8rem 1.5rem 1.5rem 1.5rem;
+    }
+    
+    .contact-info-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-content {
+        padding: 0 1rem;
+        gap: 1.5rem;
+    }
+    
+    .contact-form-block, 
+    .contact-info-block {
+        padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+    }
+    
+    .contact-form-block h2 {
+        font-size: 1.5rem;
+    }
+    
+    .contact-hero h1 {
+        font-size: 2.2rem;
+    }
+}
+
 .contact-form-block, .contact-info-block {
     margin: 0;
     background: rgba(0,0,0,0.4);
