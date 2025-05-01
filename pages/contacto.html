@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos - XcapeCode</title>
+    <link rel="stylesheet" href="../css/contacto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__logo">
+            <img src="../img/logo.png" alt="XcapeCode Logo">
+        </div>
+        <input type="checkbox" id="menu-toggle" class="navbar__checkbox">
+        <label for="menu-toggle" class="navbar__hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <ul class="navbar__menu">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="contacto.html" class="navbar__btn">Contáctanos</a></li>
+        </ul>
+    </nav>
+    <main class="contact-main">
+        <section class="contact-hero">
+            <h1>Contáctanos</h1>
+            <p class="contact-breadcrumb">Inicio / Contáctanos</p>
+        </section>
+        <section class="contact-content">
+            <div class="contact-form-block">
+                <h2>Contáctanos</h2>
+                <form class="contact-form">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name" placeholder="Tu nombre...">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="ejemplo@email.com">
+                    <label for="subject">Asunto</label>
+                    <input type="text" id="subject" name="subject" placeholder="Título...">
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" placeholder="Escribe tu mensaje..."></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+            <div class="contact-info-block">
+                <h2>Información Adicional</h2>
+                <p class="contact-desc">Conoce más sobre nuestros servicios y características:</p>
+                <div class="contact-info-list">
+                    <div class="contact-info-item">
+                        <i class="fas fa-users"></i>
+                        <span>Grupos de 2-6 personas</span>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-clock"></i>
+                        <span>60 minutos de juego</span>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-star"></i>
+                        <span>Dificultad: Media-Alta</span>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-language"></i>
+                        <span>Idiomas: Español e Inglés</span>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-wheelchair"></i>
+                        <span>Accesible para sillas de ruedas</span>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-parking"></i>
+                        <span>Estacionamiento gratuito</span>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.123456789012!2d-70.6969!3d19.4517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eb1c4f0c0c0c0c0%3A0x0c0c0c0c0c0c0c0c!2sJardines%20Metropolitanos%2C%20Santiago%20de%20los%20Caballeros!5e0!3m2!1ses!2sdo!4v1647881234567!5m2!1ses!2sdo" 
+                        width="100%" 
+                        height="140" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+        <section class="contact-challenge">
+            <img src="../img/contacto.jpg" alt="Contacto XcapeCode" class="challenge-img">
+            <div class="challenge-overlay">
+                <h2>¿Aceptas el reto?</h2>
+                <a href="#" class="challenge-btn">Descúbrelo</a>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__brand">
+                <img src="../img/logo.png" alt="XcapeCode Logo" class="footer__logo">
+                <p class="footer__slogan">Donde cada puerta es un enigma y cada minuto cuenta</p>
+            </div>
+            <div class="footer__contact">
+                <h3>Información</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+1 (829) 502-5684</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>xcapecode@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Mar-Dom: 02:00pm - 11:00pm</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__social">
+                <h3>Síguenos</h3>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/xcapecode/" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/XcapeCode" class="social-icon"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer__location">
+                <h3>Ubicación</h3>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.123456789012!2d-70.6969!3d19.4517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eb1c4f0c0c0c0c0%3A0x0c0c0c0c0c0c0c0c!2sJardines%20Metropolitanos%2C%20Santiago%20de%20los%20Caballeros!5e0!3m2!1ses!2sdo!4v1647881234567!5m2!1ses!2sdo" 
+                        width="100%" 
+                        height="120" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>&copy; 2024 XcapeCode. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
